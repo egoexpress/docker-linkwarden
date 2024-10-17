@@ -1,15 +1,4 @@
-version: "3.9"
-
 services:
-  db:
-    image: postgres:16.1-alpine
-    environment:
-      - NEXTAUTH_URL=http://localhost:3000/api/v1/auth
-    restart: always
-    volumes:
-      - pgdata:/var/lib/postgresql/data
-    networks:
-      - backend
 
   app:
     environment:
@@ -24,6 +13,20 @@ services:
       - db
     networks:
       - frontend
+      - backend
+    logging:
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+  db:
+    image: postgres:16.1-alpine
+    environment:
+      - NEXTAUTH_URL=http://localhost:3000/api/v1/auth
+    restart: always
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    networks:
       - backend
 
 volumes:
