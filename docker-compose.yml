@@ -4,7 +4,7 @@ services:
     environment:
       - NEXTAUTH_URL=http://localhost:3000/api/v1/auth
     restart: always
-    image: ghcr.io/linkwarden/linkwarden:v2.4.9
+    image: ghcr.io/linkwarden/linkwarden:v2.7.1
     ports:
       - 3000:3000
     volumes:
