@@ -25,12 +25,12 @@ services:
       - NEXTAUTH_URL=http://localhost:3000/api/v1/auth
     restart: always
     volumes:
-      - pgdata:/var/lib/postgresql/data
+      - dbdata:/var/lib/postgresql/data
     networks:
       - backend
 
 volumes:
-  pgdata:
+  dbdata:
   data:
 
 networks:
