@@ -13,7 +13,7 @@ services:
       - NEXT_PUBLIC_DISABLE_REGISTRATION=true
 
     restart: always
-    image: ghcr.io/linkwarden/linkwarden:v2.13.3
+    image: ghcr.io/linkwarden/linkwarden:v2.13.4
     ports:
       - 3000:3000
     volumes:
