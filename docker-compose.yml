@@ -14,8 +14,6 @@ services:
 
     restart: always
     image: ghcr.io/linkwarden/linkwarden:v2.13.5
-    ports:
-      - 3000:3000
     volumes:
       - data:/data/data
     depends_on:
